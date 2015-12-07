@@ -4,27 +4,24 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class Solution1 {
 
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int l = sc.nextInt();
-      ArrayList<LongInteger> lis = new ArrayList<>();
-      for(int i=0; i<l; i++) {
-      	lis.add(Integer.parseInt(sc.next()));
-      }
+      ArrayList<Long> lis = new ArrayList<>();
       int count =0;
-      for(int i=0; i<l-1; i++) {
-      	for(int j=i+1; j<l;j++) {
-      		if(lis.get(i) >= lis.get(j)){
-      			count++;
-      			int temp = lis.get(j-1) + 1;
-      			lis.remove(j);
-      			lis.add(j,temp);
-      			System.out.println(lis);
-      			break;
-      		}
-      	}
+      for(int i=0; i<l; i++) {
+            lis.add(Long.parseLong(sc.next()));
+            if(i!=0){
+                  if(lis.get(i-1) >=lis.get(i)){
+                        count++;
+                        long temp = lis.get(i-1) + 1;
+                        lis.remove(i);
+                        lis.add(i,temp);
+                        System.out.println(lis);
+                  }
+            }
       }
       System.out.println(count);
     }
