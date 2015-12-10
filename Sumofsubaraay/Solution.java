@@ -18,10 +18,7 @@ public class Solution {
 			}
 			for(int i = 0; i <=length; i++){
 				int k = 0;
-				// if(i == 0)
-				// 	k = length - 1;
-				// else
-					k = length;
+				k = length;
 				for(int j = k; j > i; j--){
 					for(int p = i; p < j; p++){
 						sum1 = sum1 + lis.get(p);
