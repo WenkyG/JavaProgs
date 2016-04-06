@@ -14,4 +14,4 @@ public class Solution {
   else if(!input.equals(result)) 
   	System.out.println("No");
  }
-}
+} 
